@@ -1,8 +1,14 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
+import Navbar from '../../components/navbar/Navbar'
 
 const Home = () => {
+
+
   return (
-    <div>Homeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
+    <div>
+     <Navbar/>
+    </div>
   )
 }
 
