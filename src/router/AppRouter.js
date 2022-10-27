@@ -10,31 +10,37 @@ const AppRouter = () => {
   const [loginOn, setLoginOn] = useState(false);
   return (
     <BrowserRouter>
-    
-    <Routes>
-        <Route path='/' element={<Login setLoginOn={setLoginOn} loginOn={loginOn}/>}/>
+      <Routes>
+        <Route
+          path="/"
+          element={<Login setLoginOn={setLoginOn} loginOn={loginOn} />}
+        />
 
-        
-        <Route path='/home' element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn}/>}>
-            <Route path='/home' element={<Home/>}/>
-        </Route>
-
-        <Route path='/details' element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}>
-            <Route path='' element={<Details/>}/>
-        </Route>
-
-        <Route path='/about' element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}>
-            <Route path='' element={<About/>}/>
-        </Route>
-        <Route path='/contact' element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}>
-            <Route path='' element={<Contact/>}/>
+        <Route
+          path="/home"
+          element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}
+        >
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/:id" element={<Details />} />
         </Route>
 
 
 
-    </Routes>
+        <Route
+          path="/about"
+          element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}
+        >
+          <Route path="" element={<About />} />
+        </Route>
+        <Route
+          path="/contact"
+          element={<PrivateRouter setLoginOn={setLoginOn} loginOn={loginOn} />}
+        >
+          <Route path="" element={<Contact />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default AppRouter

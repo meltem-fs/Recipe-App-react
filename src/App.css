@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.hakan {
+  color: #1b7f79 !important;
+}
+
+.ul_style {
+  width: 400px;
+}
+
+.img_style {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.img_style img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 968px) {
+  .img_style {
+    width: 40%;
+  }
+
+  .tarik {
+    order: -1;
+  }
+  .ul_style {
+    width: 80%;
+  }
+  .nuts {
+    width: 80%;
+  }
+}
