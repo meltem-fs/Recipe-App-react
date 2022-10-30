@@ -1,34 +1,21 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import Navbar from '../../components/navbar/Navbar'
-import DetailStyle from './Details.style';
+import Navbar from '../../navbar/Navbar'
 
 const Details = () => {
 
-  const {state} = useLocation();
-  const {
-    label,
-    ingredientLines,
-    image
-  } = state;
-
-  console.log(ingredientLines);
+  const {state} = useLocation()
   return (
     <div>
       <Navbar />
-      <DetailStyle>
-        <ol className="ul_style">
-          {ingredientLines.map((item, index) => {
-            return <li key={index}>{item}</li>;
+      <div className="details">
+        <img src={state.image} alt="" />
+        <ol className="ing">
+          <h4>INGREDİENTS</h4>
+          {state.ingredientLines.map((item) => {
+            return <li>{item} </li>;
           })}
         </ol>
-
-        <div className='tarik'>
-          <h1>{label}</h1>
-          <div className="img_style">
-            <img src={image} alt="" />
-          </div>
-        </div>
 
         <div className="nuts">
           <h4>NUTRIENTS</h4>
@@ -52,7 +39,7 @@ const Details = () => {
             {Math.round(state.totalNutrients.ENERC_KCAL.quantity)}
             {state.totalNutrients.ENERC_KCAL.unit}
           </li>
-          <li>{state.totalWeight}</li>
+          <li>Total weight :{Math.round(state.totalWeight)}g</li>
           <li>Calories: {Math.round(state.calories)}</li>
           {state.digest.slice(0, 4).map((item, index) => (
             <li key={index}>
@@ -60,7 +47,7 @@ const Details = () => {
             </li>
           ))}
         </div>
-      </DetailStyle>
+      </div>
     </div>
   );
 }

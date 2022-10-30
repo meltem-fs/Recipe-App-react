@@ -1,73 +1,272 @@
-.App {
-  text-align: center;
+body {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ****************************login************************************************************************** */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url(./assets/main.webp);
+  background-size: cover;
+}
+
+.login {
+  box-shadow: 2px 2px 10px black;
+  width: 30rem;
+  height: 20rem;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color:#691714;
+  color: rgb(255, 255, 255);
+}
+
+.login input {
+  padding: 0.7rem 1rem;
+  width: 90%;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 20px;
+}
+
+.login button {
+  padding: 0.8rem 1.7rem;
+  margin: 1rem;
+  border: none;
+  background-color: #cc7c7a;
   color: white;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.login button:hover {
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* **********home***************************************************************************************** */
 
-.hakan {
-  color: #1b7f79 !important;
-}
-
-.ul_style {
-  width: 400px;
-}
-
-.img_style {
-  width: 400px;
+.home {
+  box-shadow: rgba(17, 1, 1, 0.973) 0px 1px 10px, rgb(4, 48, 13) 0px 1px 10px;
+  width: 100vw;
+  height: 7rem;
   margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  background-image: url(./assets/07985cd07b98ff3d4fd43864ddda5970.jpg);
+  background-size:auto;
+  background-position: center;
+ 
+  
+  
+}
+.home form {
+  display: flex;
+  align-items: center;
+}
+.home input {
+  padding: 0.7rem 1rem;
+  width: 90%;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 20px;
+}
+.mealinput {
+  width: 50%;
+}
+.typeinput {
+  width: 50%;
+}
+.home select {
+  padding: 0.7rem 1rem;
+  width: 90%;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 20px;
+}
+.home label {
+  color: aliceblue;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
 
-.img_style img {
-  width: 80%;
-  object-fit: cover;
-  margin: 0 auto;
+.home button {
+  padding: 0.6rem 3rem;
+  border: none;
+  background-color: rgb(255, 232, 244);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.home button:hover {
+  transform: scale(1.1);
 }
 
-@media screen and (max-width: 968px) {
-  .img_style {
-    width: 40%;
+/* *****************navbar******************************************************************************** */
+
+.nav {
+  background: rgb(189,80,80);
+background: linear-gradient(90deg, rgba(189,80,80,1) 0%, rgba(128,42,74,1) 49%, rgba(180,58,93,1) 100%);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.nav img {
+  width: 5rem;
+  border-radius: 30%;
+}
+.nav div {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.7rem;
+  align-items: center;
+}
+.activeNavLink {
+  color: red;
+}
+
+
+
+/* *********************************************recipecard*************************************
+ */
+
+ .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+ }
+
+ .recipecard{
+    width: 18.74rem;
+    height: 29rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .recipecard:hover{
+    transform: scale(1.01);
+ }
+
+ .recipecard img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+ }
+
+ .recipecard h5{
+    padding: 1rem;
+ }
+ .recipecard button{
+    border: none;
+    border-radius: 20px;
+    padding:1rem 0;
+    width: 8rem;
+    margin-bottom: 1rem;
+    background-color: pink;
+ }
+
+  .recipecard button:hover{
+    background-color: rgb(255, 220, 220);
   }
 
-  .tarik {
-    order: -1;
+
+  /* *********************************detail**************************  */
+
+  .details{
+   
+    width: 70rem;
+    background-color: rgb(255, 240, 242);
+    margin: 3rem auto;
+    height: 30rem;
+    border-radius: 20px;
   }
-  .ul_style {
-    width: 80%;
+
+  .details img{
+    width: 30rem;
+    float: left;
+    margin-right: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px, rgba(0, 0, 0, 0.3) 5px 7px 13px -3px, rgba(0, 0, 0, 0.2) 3px -3px 0px inset;
+    border-radius: 20px;
   }
-  .nuts {
-    width: 80%;
+
+  .ing{
+    font-size: 1.2rem;
+  }
+
+  .nuts{
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 8rem;
+  }
+
+  
+
+  /* *********************************about********************** */
+
+  .about{
+    text-align: center;
+    padding: 2rem;
+  }
+.about img{
+    width: 20rem;
+}
+
+/* **********************************contact**************************** */
+
+.contact{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+@media screen and (max-width:700px) {
+  .home button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: rgb(255, 232, 244);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.details{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 240, 242);
+    margin: 1rem auto;
+    height: 60rem;
+    border-radius: 20px;
+  }
+
+  .details img{
+    width: 30rem;
+    float: left;
+    margin-right: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px, rgba(0, 0, 0, 0.3) 5px 7px 13px -3px, rgba(0, 0, 0, 0.2) 3px -3px 0px inset;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .ing{
+    font-size: 1.1rem;
+  }
+
+  .nuts{
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 8rem;
+    padding: 1rem;
   }
 }
