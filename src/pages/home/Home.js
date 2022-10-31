@@ -5,6 +5,16 @@ import RecipeCard from "./RecipeCard";
 
 
 const Home = () => {
+  const saveRecipes = () => {
+    return JSON.parse(localStorage.getItem("recipe")) || [];
+  };
+
+  const [recipe, setRecipe] = useState(saveRecipes());
+   useEffect(() => {
+     localStorage.setItem("recipe", JSON.stringify(recipe));
+   }, [recipe]);
+
+   
 
     const [values, setValues] = useState({
       foodName: "",
@@ -34,7 +44,10 @@ const Home = () => {
       getApi();
      }
 
-     const [recipe, setRecipe] = useState([])
+     
+    
+
+
 
      const handleChange = (e)=>{
       setValues({...values,[e.target.id] : e.target.value})
