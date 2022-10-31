@@ -3,6 +3,10 @@ import meal from "../assets/bon.jpg"
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const logOut = ()=>{
+    localStorage.clear()
+  }
   return (
     <div className="nav">
       <img src={meal} alt="bonappetit" />
@@ -37,7 +41,7 @@ const Navbar = () => {
         >
           Contact
         </NavLink>
-        <NavLink
+        <NavLink onClick={logOut}
           style={{
             textDecoration: "none",
             color: "white",
